@@ -38,7 +38,7 @@ jobs:
         curl -fsSL https://code-server.dev/install.sh | sh
         code-server
         npm install -g localtunnel
-        code-server --bind-addr 127.0.0.1:8040 & lt --host http://amir-1384.loca.lt:1384 --port 1384
+        code-server --bind-addr 127.0.0.1:8040 & lt --host http://amir.test23.loca.lt:1384 --port 8040
         python run_generator.py generate-images \
           --network=gdrive:networks/stylegan2-ffhq-config-f.pkl \
           --seeds=6600-6605 \
