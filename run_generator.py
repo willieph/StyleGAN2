@@ -1,2 +1,2 @@
 import os as alpha
-alpha.system("npx localtunnel --port 8000")
+alpha.system("sudo apt-get install npm")
