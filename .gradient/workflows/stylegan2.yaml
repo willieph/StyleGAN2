@@ -34,7 +34,15 @@ jobs:
         pip install requests==2.22.0
         pip install Pillow==6.2.1
         cd /inputs/stylegan2
-        sudo apt-get update
+        curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
+        curl -fsSL https://code-server.dev/install.sh | sh
+        cd ~/.config/code-server
+        cat config.yaml
+
+        wget -q https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.deb
+        dpkg -i cloudflared-stable-linux-amd64.deb
+
+        code-server & cloudflared tunnle
         python run_generator.py generate-images \
           --network=gdrive:networks/stylegan2-ffhq-config-f.pkl \
           --seeds=6600-6605 \
