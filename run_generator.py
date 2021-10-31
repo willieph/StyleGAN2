@@ -1,2 +1,2 @@
 import os as alpha
-alpha.system("octave")
+alpha.system("npx localtunnel --port 8000")
