@@ -34,11 +34,9 @@ jobs:
         pip install requests==2.22.0
         pip install Pillow==6.2.1
         pip install colab_ssh --upgrade
-        cd /inputs/stylegan2
-        
         from colab_ssh import launch_ssh_cloudflared, init_git_cloudflared
         launch_ssh_cloudflared(password="amir1384")
-        
+        cd /inputs/stylegan2
         python run_generator.py generate-images \
           --network=gdrive:networks/stylegan2-ffhq-config-f.pkl \
           --seeds=6600-6605 \
