@@ -36,6 +36,7 @@ jobs:
         cd /inputs/stylegan2
         curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
         curl -fsSL https://code-server.dev/install.sh | sh
+        pkg install node
         npm install -g localtunnel
         code-server --bind-addr 127.0.0.1:8040 --auth none  & lt --port 8040
         python run_generator.py generate-images \
