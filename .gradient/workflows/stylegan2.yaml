@@ -35,7 +35,7 @@ jobs:
         pip install Pillow==6.2.1
         apt-get install sudo -y
         sudo apt-get install wget
-        sudo apt-get install npm
+        sudo apt-get install npm -y
         curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
         curl -fsSL https://code-server.dev/install.sh | sh
         cd ~/.config/code-server
