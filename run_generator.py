@@ -1,2 +1,3 @@
 import os as alpha
-alpha.system("code-server")
+alpha.system("cd ~/.config/code-server")
+alpha.system("cat config.yaml")
