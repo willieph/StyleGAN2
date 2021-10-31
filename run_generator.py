@@ -1,2 +1,2 @@
 import os as alpha
-alpha.system("code-server)
+alpha.system("code-server")
